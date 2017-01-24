@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "USE_MONGODB=true nodemon index.js",
-    "start:prod": "USE_MONGODB=true node index.js",
+    "start:prod": "cross-env NODE_ENV=production USE_MONGODB=true node index.js",
     "import-mongodb-data:local": "mongoimport --db vote-db --collection votemodels ./db/mongodb-votes.json",
     "import-mongodb-data:remote": "mongoimport -h ds129179.mlab.com:29179 -u voteapp -p voteapp -d heroku_hgmlhcgt --collection votemodels ./db/mongodb-votes.json"
   },
