@@ -137,7 +137,6 @@ function start(port, voteDatabase) {
         if (error) {
             console.error(error);
         } else {
-            //var host = server.address().address;
             var host = server.address().address;
             var port = server.address().port;
             console.info('==> 🌎  Express is Listening on ' + host + ':' + port + '. Visit http://' + host + ':' + port + '/ in your browser.');
