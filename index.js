@@ -4,6 +4,8 @@ const VoteServer = require('./VoteServer.js').default;
 const useMongoDb = process.env.USE_MONGODB;
 const usePGDb = process.env.USE_PGDB;
 
+const PORT = process.env.PORT || 3000;
+
 var Database = require('./db/InMemoryVoteDatabase').default;
 if (useMongoDb) {
     Database = require('./db/MongoDbVoteDatabase').default;
@@ -17,5 +19,5 @@ Database.create((err, database) => { // Error-First callback
         return; // Server stops here...
     }
     console.log('Starting VoteApp...');
-    VoteServer.start(3000, database);
+    VoteServer.start(PORT, database);
 });
