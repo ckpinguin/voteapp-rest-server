@@ -7,7 +7,9 @@
     "url": "https://github.com/ckpinguin/react-boilerplate"
   },
   "scripts": {
-    "start": "USE_MONGODB=true node server/index.js",
+    "start": "npm run dev",
+    "dev": "USE_MONGODB=true nodemon index.js",
+    "start:prod": "USE_MONGODB=true node index.js"
     "import-mongodb-data": "mongoimport --db vote-db --collection votemodels ./server/db/mongodb-votes.json"
   },
   "author": "Christof Kälin",
