@@ -94,7 +94,7 @@ const MongoDbVoteDatabase = {
 
 export default {
     create(callback) {
-        const url = 'mongodb://voteapp:voteapp@ds129179.mlab.com:29179/heroku_hgmlhcgt';
+        const url = 'mongodb://voteadmin:voteadmin@ds129179.mlab.com:29179/heroku_hgmlhcgt';
         console.log(`Connecting to '${url}'`);
         mongoose.connect(url, {}, (err) => {
             return callback(err, MongoDbVoteDatabase); // callback defined error-first
